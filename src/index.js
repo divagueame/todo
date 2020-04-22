@@ -1,14 +1,17 @@
 import "./style.css";
-
 import {projects} from './initDisplay.js';
 import {createNewTaskForm} from './createNewTaskForm.js';
-window.addEventListener('load',function(){   
-})
+import {newProjectsFolder} from './newProjectFolder.js'
 
 
+const newProjectForm = document.querySelector("#addProjectForm");
 
+newProjectForm.addEventListener('submit', newProjectsFolder);
+newProjectForm.addEventListener('submit', function(){
+    newProjectForm.reset();
+});
 
-const newTaskForm = document.querySelector("form");
+const newTaskForm = document.querySelector(".formTodo");
 
 newTaskForm.addEventListener('submit',createNewTaskForm);
 newTaskForm.addEventListener('submit',function(){
@@ -16,8 +19,8 @@ newTaskForm.addEventListener('submit',function(){
 })
 
 newTaskForm.addEventListener('click',function(){
-    console.log("PROJECTS: ",projects);
+    // console.log("PROJECTS: ",projects);
     
-    console.log("LOCAL STORAGE: ", localStorage)
+    // console.log("LOCAL STORAGE: ", localStorage)
 })
 

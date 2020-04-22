@@ -13,6 +13,7 @@ const newTodo = (title, description, dueDate, priority)=> {
     thisTodo["description"] = description;
     thisTodo["dueDate"] = dueDate;
     thisTodo["priority"] = priority;
+    thisTodo["completed"]= false;
     thisTodo["taskId"] = title+description+dueDate+priority+"taskID";
     // thisTodo["taskId"] = ""+ title + Math.floor(10000*Math.random()) + description + dueDate + priority;
 

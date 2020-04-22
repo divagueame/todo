@@ -11,28 +11,37 @@
         </style> 
     </head>
     <body>
+        
         <div class="header">Task manager</div>
-
-        <div class="newTodoForm">
-
-            <form id="form" action="#">
-                <input type="text" placeholder="Task title" name="titleInput">
-                <input type="text" placeholder="Task description" name="descriptionInput">
-                <input type="date" name="dateInput" id="">
-                <label for="priority-select">Set the priority:</label>
-                <select name="priorityInput" id="pet-select">
-                    <option value="">Priority for this task</option>
-                    <option value="none">None</option>
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
-                <input type="submit" value="Add new task">
-            </form>
-        </div>
-    
-        <div class="container"></div>
-            
+        <div class="mainContainer">
+            <div class="mainLeft">
+                <div class="projectsList">projectsList
+                    <form id="addProjectForm" action="#">
+                        <input class="addButton" type="submit" value="Create new folder">
+                        <input type="text" name="newProjectTitle">
+                    </form>
+                </div>
+            </div>
+            <div class="mainRight">
+                <div class="newTodoForm">
+                    <form id="form" class="formTodo" action="#">
+                        <input type="text" placeholder="Task title" name="titleInput">
+                        <input type="text" placeholder="Task description" name="descriptionInput">
+                        <input type="date" name="dateInput" id="">
+                        <label for="priority-select">Set the priority:</label>
+                        <select name="priorityInput" id="pet-select">
+                            <option value="">Priority for this task</option>
+                            <option value="none">None</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                        <input type="submit" value="Add new task">
+                    </form>
+                </div>
+                <div class="container"></div>
+            </div>
+        </div>     
           
             
             
