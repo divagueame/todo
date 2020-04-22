@@ -1,3 +1,5 @@
+import {readActiveProject} from './activeProject';
+
 const protoNewTodo = {
     updateTodo: function(targetKey, newValue){
         this[targetKey] = newValue
@@ -8,8 +10,10 @@ const protoNewTodo = {
 };
 
 const newTodo = (title, description, dueDate, priority)=> {
+    var currentActive = readActiveProject()
     var thisTodo = Object.create(protoNewTodo);
     thisTodo["title"] = title;
+    thisTodo['containerProject'] = currentActive;
     thisTodo["description"] = description;
     thisTodo["dueDate"] = dueDate;
     thisTodo["priority"] = priority;

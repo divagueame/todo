@@ -65,6 +65,18 @@ body {
     background-color: forestgreen;
     padding: 1rem
 }
+
+.projectsListDisplay {
+    background-color: rgb(195, 179, 255);
+    margin: 5px ;
+    padding: 1rem;
+    cursor: pointer;
+}
+.currentWorkingProject {
+    background-color: indianred;
+    padding: 1rem;
+    border: 3px solid rgb(166, 166, 226);
+}
 .task-container {
     padding: 0.11rem;
     border: chocolate 2px solid;

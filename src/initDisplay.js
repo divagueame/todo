@@ -12,7 +12,7 @@ const restoreLocalToProjects = function(originalArray, callbackCreateTodo){
   originalArray.forEach(element => {
       if (element.indexOf('{')==0)
         {
-          console.log(element);
+          // console.log(element);
         var tempElement = JSON.parse(element);
         tempElement = callbackCreateTodo(...Object.values(tempElement));
         returnArray.push(tempElement);
