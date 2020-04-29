@@ -1,26 +1,26 @@
-import {displayNewCard} from './displayNewCard.js';
+
 import { newTodo } from './newTodo.js';
 import {projects} from './initDisplay.js';
+import { updateDisplayTasks } from './updateDisplayTasks.js';
 
-const mainContainer = document.querySelector(".container");
-
-
-const updateLocalStorage = function(target, todoObj){
-    localStorage.setItem(target, JSON.stringify(todoObj));
-}
 
 function createNewTaskForm(e) {
     e.preventDefault();
-    var newName = (e.target.elements[0].value);
-    var newDescription = (e.target.elements[1].value);
-    var newDate = (e.target.elements[2].value);
-    var newPriority = (e.target.elements[3].value);
-    var objFromForm = newTodo(newName,newDescription,newDate,newPriority);
-    displayNewCard(objFromForm,mainContainer);
+    let newName = (e.target.elements[0].value);
+    let newDescription = (e.target.elements[1].value);
+    let newDate = (e.target.elements[2].value);
+    let newPriority = (e.target.elements[3].value);
+    let objFromForm = newTodo(newName,newDescription,newDate,newPriority);
     projects.push(objFromForm);
-    updateLocalStorage(objFromForm['taskId'],objFromForm);
+    updateDisplayTasks();
+    // displayNewCard(objFromForm,mainContainer); //
+    // console.log("EN local se guarda: ",objFromForm['taskId'],objFromForm)
+    // console.log("Task Se guarad en local como Taskname"+newName,JSON.stringify(objFromForm))
+    localStorage.setItem("Taskname"+newName,JSON.stringify(objFromForm))
 
 }
+
+
 
 
 

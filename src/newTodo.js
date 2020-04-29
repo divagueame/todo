@@ -10,8 +10,9 @@ const protoNewTodo = {
 };
 
 const newTodo = (title, description, dueDate, priority)=> {
-    var currentActive = readActiveProject()
-    var thisTodo = Object.create(protoNewTodo);
+    let currentActive = readActiveProject();
+    let thisTodo = Object.create(protoNewTodo);
+    console.log("EN TODO el container Project es: ",currentActive)
     thisTodo["title"] = title;
     thisTodo['containerProject'] = currentActive;
     thisTodo["description"] = description;

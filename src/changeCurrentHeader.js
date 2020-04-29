@@ -1,5 +1,7 @@
-const changeCurrentHeader = function(newProjectTitle,target) {
-    return target.innerHTML = `${newProjectTitle}`    
+let currentProjectDisplay = document.querySelector('.currentWorkingProject');
+
+const changeCurrentHeader = function(newProjectTitle) {
+    return currentProjectDisplay.innerHTML = `${newProjectTitle}`    
 }
 
 export {changeCurrentHeader}
