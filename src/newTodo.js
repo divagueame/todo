@@ -1,5 +1,5 @@
 import {readActiveProject} from './activeProject';
-
+console.log('NEW TODO ACTIVATED')
 const protoNewTodo = {
     updateTodo: function(targetKey, newValue){
         this[targetKey] = newValue
@@ -20,8 +20,6 @@ const newTodo = (title, description, dueDate, priority)=> {
     thisTodo["priority"] = priority;
     thisTodo["completed"]= false;
     thisTodo["taskId"] = title+description+dueDate+priority+"taskID";
-    // thisTodo["taskId"] = ""+ title + Math.floor(10000*Math.random()) + description + dueDate + priority;
-
     return thisTodo
 }
 

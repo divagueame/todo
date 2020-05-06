@@ -8,8 +8,7 @@ const taskAdderToggler = function (elements){
         togglerButtonSelector.addEventListener('click',function(){
         formHtmlSelector.classList.remove('newTodoFormHidden');
         togglerButtonSelector.classList.add('newTodoFormTogglerHidden');
-        console.log('AHORA',elements)
-        console.log('YOu cliked here bitch');
+        // console.log('AHORA',elements);
     })
 
     }
